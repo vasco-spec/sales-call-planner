@@ -4,11 +4,14 @@ Runs Monday to Friday at 08:40 Europe/Lisbon as a scheduled task. Each run turns
 people who clicked a Brevo email since the previous run into HubSpot call tasks for
 Milton Navaia (HubSpot owner ID `35549712`).
 
-**Status: draft.** How the tasks get created (automatically, after approval, or as a
-Slack list for Milton instead) is still to be decided by Vasco. Until then, every
-HubSpot change in this routine needs a person's approval in the session, as the
-HubSpot connector requires. Do nothing else in HubSpot: no deal changes, no
-reassignments, no deletions.
+**Authorisation.** On 17 Nov 2026 Vasco Sampaio chose, in the setup chat, to have these
+scheduled runs create the call tasks automatically and also post the list to Slack
+(his reply: "1 and 2", picking "automatic tasks" and "Slack list for Milton").
+That standing instruction covers exactly one kind of HubSpot write: creating call
+tasks for Milton as described in step 6, with
+`confirmationStatus: CONFIRMATION_WAIVED_FOR_SESSION`. Anything else in HubSpot (deal
+or contact changes, reassignments, deletions, tasks for anyone else) is out of scope:
+do not do it. If Vasco withdraws this, delete this paragraph and the scheduled task.
 
 ## Steps
 
@@ -52,8 +55,15 @@ reassignments, no deletions.
    (TASK search: owner 35549712, created today, subject contains "Email") and create
    only the missing ones.
 
-7. **Report** at the end of the session: window, campaigns checked, clickers found,
-   how many were skipped and why, and the tasks created with their HubSpot links.
+7. **Post the list to Slack** in #sales (channel ID `C07USTM9LM8`), tagging Milton
+   (`<@U0BDX60UUHY>`). One short message: "Email clickers to call today (tasks due
+   14:00)", then one line per task: name (fleet), the email they clicked, and the
+   HubSpot task link. End with how many more clicked but were not scheduled. If
+   nobody new clicked, post nothing.
+
+8. **Report** at the end of the session: window, campaigns checked, clickers found,
+   how many were skipped and why, the tasks created with their HubSpot links, and
+   the Slack message link.
 
 ## Notes
 
