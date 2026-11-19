@@ -7,8 +7,9 @@ Milton Navaia (HubSpot owner ID `35549712`).
 **Authorisation.** On 17 Nov 2026 Vasco Sampaio chose, in the setup chat, to have these
 scheduled runs create the call tasks automatically and also post the list to Slack
 (his reply: "1 and 2", picking "automatic tasks" and "Slack list for Milton").
+On 19 Nov 2026 he added: don't skip customers, call them too, in a separate list.
 That standing instruction covers exactly one kind of HubSpot write: creating call
-tasks for Milton as described in step 6, with
+tasks for Milton (prospects and customers) as described in step 6, with
 `confirmationStatus: CONFIRMATION_WAIVED_FOR_SESSION`. Anything else in HubSpot (deal
 or contact changes, reassignments, deletions, tasks for anyone else) is out of scope:
 do not do it. If Vasco withdraws this, delete this paragraph and the scheduled task.
@@ -31,19 +32,23 @@ do not do it. If Vasco withdraws this, delete this paragraph and the scheduled t
    100 emails per call) with properties `email, firstname, lastname, lifecyclestage,
    closedate, notes_next_activity_date, hubspot_owner_id`. Skip a clicker when:
    - they are not in HubSpot (list them in the report),
-   - `closedate` is set or `lifecyclestage` is `customer` (already a customer),
    - `notes_next_activity_date` falls within the next 7 days (a follow-up is already booked).
+
+   Split the rest into two lists: **Customers** (`closedate` is set or `lifecyclestage`
+   is `customer`) and **Opportunities** (everyone else). Customers are not skipped:
+   clicking is a good reason to get in touch.
 
 4. **Deal and fleet.** For each remaining contact, find their deals
    (`search_crm_objects`, DEAL, associatedWith the contact) with properties
    `dealname, dealstage, fleet, hubspot_owner_id`. Use the most recently modified deal
    that is not Closed Won. No deal is fine: the task goes on the contact only.
 
-5. **Rank and cap.** Sort by fleet size (largest first, unknown last), then by links
-   clicked. Keep the top **15**. List the rest in the report as "not scheduled today".
+5. **Rank and cap.** Within each list, sort by fleet size (largest first, unknown last), then by links
+   clicked. Keep the top **15** across both lists (Opportunities first). List the rest in the report as "not scheduled today".
 
 6. **Create the tasks** (`manage_crm_objects`, at most 10 objects per call):
    - `hs_task_subject`: `Email click follow-up – <deal name, or contact name/email> (fleet N)`
+     for Opportunities, `Customer check-in (email click) – <name> (fleet N)` for Customers
      (leave out "(fleet N)" when unknown)
    - `hs_task_body`: which campaign(s) they clicked and when, in one line each
    - `hs_task_type` CALL, `hs_task_priority` HIGH, `hs_task_status` NOT_STARTED
@@ -56,9 +61,9 @@ do not do it. If Vasco withdraws this, delete this paragraph and the scheduled t
    only the missing ones.
 
 7. **Post the list to Slack** in #sales (channel ID `C07USTM9LM8`), tagging Milton
-   (`<@U0BDX60UUHY>`). One short message: "Email clickers to call today (tasks due
-   14:00)", then one line per task: name (fleet), the email they clicked, and the
-   HubSpot task link. End with how many more clicked but were not scheduled. If
+   (`<@U0BDX60UUHY>`). One short, punchy message with two sections:
+   *Oportunidades* and *Clientes (contactar)*, one line per task: name (fleet) linked
+   to the HubSpot task. Mention the email clicked once at the top. End with how many more clicked but were not scheduled. If
    nobody new clicked, post nothing.
 
 8. **Report** at the end of the session: window, campaigns checked, clickers found,
