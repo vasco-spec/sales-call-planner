@@ -1,0 +1,6 @@
+s1|Vais começar a trabalhar como motorista TVDE? Primeiro, tens de abrir atividade nas Finanças.
+s2|No Portal das Finanças, escolhe a declaração de início de atividade.
+s3|Na caracterização, preenche os teus dados e a data de início.
+s4|Na atividade, indica o transporte de passageiros em TVDE.
+s5|Valida tudo e submete. Fica feito em poucos minutos.
+s6|Com dúvidas? Na app GalgoSheets, um contabilista ajuda-te em cada passo.

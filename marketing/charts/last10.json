@@ -1,0 +1,82 @@
+[
+ {
+  "id": 111,
+  "subject": "Contratos de motoristas gerados automaticamente",
+  "sent": "2026-11-05T09:04:44.000+00:00",
+  "delivered": 7774,
+  "opens": 2545,
+  "clicks": 139
+ },
+ {
+  "id": 104,
+  "subject": "A vistoria que vale em tribunal",
+  "sent": "2026-11-12T09:09:05.000+00:00",
+  "delivered": 7718,
+  "opens": 1953,
+  "clicks": 17
+ },
+ {
+  "id": 103,
+  "subject": "Fotografias e documentos das viaturas, sempre à mão",
+  "sent": "2026-11-10T09:12:19.000+00:00",
+  "delivered": 7758,
+  "opens": 1994,
+  "clicks": 40
+ },
+ {
+  "id": 102,
+  "subject": "Distribua transfers sem perder tempo ao telefone",
+  "sent": "2026-11-17T09:05:05.000+00:00",
+  "delivered": 7802,
+  "opens": 1856,
+  "clicks": 84
+ },
+ {
+  "id": 101,
+  "subject": "Saiba sempre que motorista está com cada viatura",
+  "sent": "2026-11-03T09:07:12.000+00:00",
+  "delivered": 7780,
+  "opens": 1879,
+  "clicks": 48
+ },
+ {
+  "id": 100,
+  "subject": "Pagamentos de semanas anteriores: tudo num só pagamento",
+  "sent": "2026-11-19T09:08:13.000+00:00",
+  "delivered": 7797,
+  "opens": 2701,
+  "clicks": 70
+ },
+ {
+  "id": 95,
+  "subject": "Mais um ano no Dia da Mobilidade Powered by Bolt",
+  "sent": "2026-09-24T12:09:29.000+01:00",
+  "delivered": 7587,
+  "opens": 2488,
+  "clicks": 42
+ },
+ {
+  "id": 94,
+  "subject": "Comunicado oficial",
+  "sent": "2026-09-25T11:29:38.000+01:00",
+  "delivered": 632,
+  "opens": 404,
+  "clicks": 1
+ },
+ {
+  "id": 93,
+  "subject": "Programação para o Dia da Mobilidade",
+  "sent": "2026-09-18T11:51:45.000+01:00",
+  "delivered": 7575,
+  "opens": 1822,
+  "clicks": 23
+ },
+ {
+  "id": 92,
+  "subject": "A GalgoSheets vai estar no Dia da Mobilidade – Powered by Bolt! 🚀",
+  "sent": "2026-09-13T19:01:16.000+01:00",
+  "delivered": 7549,
+  "opens": 1791,
+  "clicks": 25
+ }
+]
